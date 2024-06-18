@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>PROYECTO JON</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+	<meta charset="utf-8">
+</head>
+<body>
+	<div>
+		<img alt src="../images/html_logo.png" width="170">
+		<nav>
+		 <ul class="nav">
+	           <li><a href="../index.html" class="boton">INICIO</a></li>
+	           <li><a href="#" class="boton1">HTML</a></li>
+	           <li><a href="../css/css.html" class="boton2">CSS</a></li>
+	     </ul>
+		</nav>
+		<header>
+		
+		</header>
+		<main>
+	        <div id="container">
+                        <h1 class="html">¿QUÉ ES HTML?</h1>
+			<section>
+				<p>HTML es el lenguaje que se emplea para el desarrollo de páginas de internet.</p>
+                <p>Este lenguaje está constituido de elementos que el navegador interpreta y los despliega en la pantalla de acuerdo a su objetivo. Veremos que hay elementos para disponer imágenes y videos sobre una página, hipervínculos que nos permiten dirigirnos a otra página, listas, textos etc.</p>
+                <p>Para poder crear una página HTML se requiere un simple editor de texto (en nuestro caso emplearemos este sitio para aprender pero luego puede descargarse un editor a su pc para almacenar las páginas en forma local).</p>
+                <p>Luego para probar las páginas que desarrolla debe emplear un navegador de internet (Chrome, FireFox, Edge etc.)</p>
+                <hr>
+                <hr>
+                <h2>Estructura interna de una página HTML</h2>
+                <p>Las instrucciones HTML están encerradas entre los caracteres: < >.</p>
+                <p>Muchos elementos HTML requieren una marca de comienzo y otra de finalización. Todo aquello que está fuera de las marcas del lenguaje se imprime en la pantalla (dentro del navegador).</p>
+                <p>La estructura básica de una página HTML es:</p>
+                <img src="../images/estructura.PNG" width="650">
+                <p>Lo primero es el DOCTYPE que informa al navegador que el contenido siguiente se trata de un archivo HTML, luego continúa con la marca:< html > y finaliza con la marca de cierre html al final del archivo.</p>
+                <p>Una página HTML tiene dos secciones muy bien definidas que son la cabecera (head) y el cuerpo de la página (body).</p>
+                <p>En la cabecera es común inicializar el título de la página dentro de las marcas < title > (normalmente aparece en la barra superior de nuestro navegador). El título debe hacer referencia al contenido en sí de la página. Dentro de la cabecera disponemos la etiqueta meta donde definimos la propiedad charset con el valor UTF-8 que es un formato de caracteres ampliamente empleado en internet (si no disponemos este formato no podemos disponer caracteres acentuados por ejemplo).</p>
+                <p>Todo el texto que dispongamos dentro del < body > aparece dentro del navegador tal cual lo hayamos escrito.</p>
+                <p>Todas las páginas tiene como mínimo esta estructura: cabecera y cuerpo.</p>
+                <hr>
+                <hr>
+                <h2>Etiquetas</h2>
+                <p>Las etiquetas HTML son bloques de código que dan formato, funcionalidad y estructura al contenido de las páginas web. Estos fragmentos sirven como indicadores o instrucciones para que un navegador muestre de forma adecuada la información contenida en tus documentos. </p>
+                <h3>Títulos < h1 >< h2 >< h3 >< h4 >< h5 >< h6 > </h3>
+                <p>El título de mayor nivel es < h1 >, es decir el que tiene normalmente una fuente de mayor tamaño. Según la importancia del título utilizaremos alguno de estos elementos HTML. No hay que confundir el título de la página que va en la sección del head con las etiquetas h1, h2, h3 etc.</p>
+                <h3>Párrafos < p ></h3>
+                <p>Un párrafo es una oración o conjunto de oraciones referentes a un mismo tema. Todo lo que encerremos entre las marcas < p > y </ p > aparecerá separado por un espacio con respecto al próximo párrafo.</p>
+                <h3>Enfasis < em > < strong ></h3>
+                <p>Enfatizar algo significa realzar la importancia de una cosa, por ejemplo una palabra o conjunto de palabras. Así como tenemos seis niveles de títulos para enfatizar un bloque contamos con dos elementos que son < em > < strong >. El elemento de mayor fuerza de énfasis es "strong" y le sigue "em".</p>
+                <hr>
+                <hr>
+                <h2>Imágenes dentro de una página < img ></h2>
+                <p>Para insertar una imagen dentro de una página debemos utilizar la etiqueta < img >, la cual no tiene una marca de finalización. Los formatos clásicos son los archivos con extensiones gif, jpg y png.Esta etiqueta dispone de las propiedades src y alt.</p>
+                <p>En la propiedad src indicamos el nombre del archivo que contiene la imagen. Si la imagen se encuentra en el mismo directorio donde se almacena la página HTML, con indicar el nombre de archivo basta, en caso de estar en otra carpeta deberíamos indicar su ruta de carpetas (ej: images/foto1.jpg). Otra propiedad muy recomendada es alt, donde disponemos un texto que verán los usuarios que visiten el sitio con un navegador que sólo permite texto o si no cargan las imagenes. El texto debe describir el contenido de la imagen.</p>
+                <hr>
+                <hr>
+                <h2>Listas</h2>
+                <h3>Lista ordenada < ol ></h3><p>Esta etiqueta HTML es útil cuando debemos numerar o listar una serie de datos. La marca < ol > y su correspondiente marca de cerrado es < /ol >. En su interior cada uno de los items se los dispone con el elemento li, que también tiene la marca de comienzo < li > y la marca de fin de item < /li >.Luego se encarga el navegador de numerar cada uno de los items contenidos en la lista, tengamos en cuenta que se numeran porque se trata de una lista ordenada. < ol > viene de las palabras ordered list y < li > viene de las palabras list item.</p>
+                <h3>Lista no ordenada < ul ></h3>
+                <p>Una lista no ordenada como su nombre lo indica no utiliza un número delante de cada item sino un pequeño símbolo gráfico. La forma de implementar este tipo de listas es idéntico a las listas ordenadas. < ul > viene de las palabras unordered list.</p>
+                <h3>Lista de definiciones < dl ></h3>
+                <p>Como su nombre lo indica se utiliza para asociar un término y la definición del mismo. El navegador se encarga de destacar y separa el término y su definición. Las marcas que encierran a la lista son < dl > (Definition List) y </ dl >. Ahora debemos poner a pares estos dos elementos < dt > (Definition Term) y < dd > (Definition Description). </p>
+                <h3>Listas anidadas</h3>
+                <p>El lenguaje HTML nos permite insertar una lista dentro de otra. Se pueden anidar listas de distinto tipo, por ejemplo podemos tener una lista no ordenada y uno de los item puede ser una lista ordenada. Para el anidamiento de listas solo debemos tener cuidado en la correcta apertura y cerrado de las marcas.</p>
+                <hr>
+                <hr>
+                <h2>Tablas</h2>
+                <p>El objetivo fundamental de las tablas es mostrar una serie de datos en forma ordenada, organizado en filas y columnas. Para la creación de una tabla intervienen una serie de elementos:< table > Es la marca de comienzo de la tabla. Este elemento requiere la marca de cierre. < tr > Es la marca de comienzo de una fila. Esta marca debe estar dentro del elemento table. Este elemento requiere la marca de cierre. < td > Es la marca de comienzo de una celda. Esta marca debe estar dentro del elemento tr. Este elemento requiere la marca de cierre.</p>
+                <h3>Tabla con encabezado < th ></h3>
+                <p>La primer característica que le vamos a agregar a una tabla son las celdas de encabezado. Normalmente la primer fila de una tabla puede representar los títulos para cada columna. Para indicar que se trata de una celda de encabezado utilizamos el elemento < th > en lugar de < td >. El navegador representa distinto las celdas de datos y las celdas de encabezamiento.</p>
+                <h3>Tabla y combinación de celdas</h3>
+                <p>En algunas situaciones se necesita que una celda ocupe el lugar de dos o más celdas en forma horizonzal o vertical, para estos casos el elemento td o th dispone de dos propiedades llamadas rowspan y colspan. A estas propiedades se les asigna un valor entero a partir de 2. Si queremos que una celda ocupe tres columnas luego inicializamos la propiedad colspan con el valor 3.</p>
+                <h3>Tabla con título < caption ></h3>
+                <p>Para disponer un título a una tabla debemos incorporar el elemento caption inmediatamente después que abrimos la marca table. El elemento caption requiere la marca de apertura y cierre.</p>
+                <hr>
+                <hr>
+                <h2>Comentarios dentro de una página < !-- -- ></h2>
+                <p>Un comentario es un texto que solo le interesa a la persona que desarrolló la página, el navegador ignora todo el contenido que se encuentra dentro de esta marca. Los comentarios son muy útiles para el desarrollador de la página. Uno deja anotaciones para facilitar el mantenimiento del sitio. Además hay que tener en cuenta que puede ser otra persona la que continue en otro momento el mantenimiento de las páginas que desarrollamos nosotros. Lo que para uno puede ser muy obvio a otro desarrollador puede no ser tan obvio. Otro uso muy habitual cuando estamos desarrollando la página si queremos deshabilitar una parte del código podemos encerrarla entre los caracteres de comentarios. La sintaxis para definir un comentario es: < !-- Aquí va el comentario -- >. Es obligatorio luego del caracter de menor < disponer el signo de admiración y los dos guiones seguidos. Cerramos el comentario con dos guiones y el signo de mayor ></disponer> </p>
+                <hr>
+                <hr>
+                <h2>Formularios</h2>
+                <p>Un formulario permite que el visitante al sitio cargue datos y sean enviados al servidor. Es el medio ideal para registrar comentarios del visitante sobre el sitio, solicitar productos, sacar turnos etc. Para crear un formulario debemos utilizar el elemento form, que tiene marca de comienzo y fin. Dentro de la marca form veremos otros elementos para crear botones, editores de línea, cuadros de chequeo, radios de selección etc.</p>
+                <p>Veamos detenidamente la estructura de un formulario elemental, lo primero la apertura de la marca form donde debemos definir dos propiedades (action y method):La propiedad action se inicializa con el nombre de la página que contiene el programa que procesará los datos en el servidor. La segunda propiedad que debemos inicializar es method. Esta propiedad puede almacenar únicamente dos valores (post o get). Normalmente un formulario se envía mediante post (los datos se envían con el cuerpo del formulario) En caso de utilizar get los datos se envían en la cabecera de la petición de la página, utilizando el método get estamos limitados en la cantidad de datos a enviar, no asi con el método post. El elemento input permite definir un cuadro de texto (editor de línea) si asignamos a la propiedad type el valor "text". Todo cuadro de texto debe inicializar la propiedad name con un nombre para el cuadro de texto. También mediante el elemento input definimos un botón para el envío de datos al servidor. Debemos inicializar la propiedad type con el valor submit, con esto ya tenemos un botón para el envío de datos. La propiedad value almacena la etiqueta que debe mostrar el botón.
+                </p>
+                <h3>Formulario - input type="text"</h3>
+                <p>Veamos ahora con más detenimiento el elemento input. Este elemento hemos visto que nos permite definir cuadros de texto y botón para subir los datos al servidor. Ahora veremos que también podemos definir cuadros para el ingreso de una clave y botones para borrar el contenido de todos los controles del formulario. Veamos la sintaxis nueva para definir un cuadro de texto para el ingreso de una clave: < input type="password" name="clave" size="12" >. Utilizamos el mismo elemento input pero inicializamos la propiedad type con el valor "password", con esto logramos que cuando el visitante ingrese la clave se visualicen asteriscos en lugar de los caracteres que tipeamos.</p>
+                <p>Luego para definir un botón que permita borrar todos los datos ingresados hasta el momento lo hacemos mediante: < input type="reset" value="borrar" >. Es decir inicializamos la propiedad type con el valor "reset", con esto sabe el navegador que cuando dicho botón sea presionado debe borrar todos los controles de ingreso de datos de dicho formulario. Otra cosa que hay que tener en cuenta que la propiedad name de cada elemento input debe tener un nombre distinto (esto debido a que en el servidor se lo rescata a partir de este nombre).</p>
+                <h3>Formulario - input type="checkbox"</h3>
+                <p>El elemento checkbox es otro control que se puede insertar en un formulario. Un checkbox es una casilla de selección que puede tomar dos valores (seleccionado/no seleccionado). Veamos la sintaxis para definir controles de formulario de tipo checkbox: < input type="checkbox" name="java">Java< br ></p>
+                <h3>Formulario - input type="radio"</h3>
+                <p>Cuando tenemos un conjunto de opciones pero solo una puede ser seleccionada debemos emplear controles visuales de tipo radio. Para definir controles de tipo radio también utilizamos el elemento input inicializando la propiedad type con el valor "radio"</p>
+                <h3>Formulario - select (cuadro de selección individual)</h3>
+                <p>El elemento select es un cuadro de selección. Este elemento HTML nos permite seleccionar una opción entre un conjunto. Veremos en el concepto próximo que según como la configuramos podemos seleccionar varias opciones. Veamos la sintaxis para crear un cuadro de selección, primero abrimos la marca select la cual tiene definido la propiedad name: < select name="pais". Luego sin cerrar el select definimos tantos elementos de tipo option como opciones tendrá el cuadro de selección.</p>
+                <h3>Formulario - Envío de datos mediante mail</h3>
+                <p>Hasta ahora siempre configuramos la propiedad action de la marca < form > con el nombre de un archivo que procesa los datos en el servidor: < form action="registrardatos.php" method="post" >. Para poder resolver esto debemos conocer el lenguaje PHP o algún otro lenguaje de servidor. Conociendo solo HTML la solución es enviar los datos mediante el programa cliente de mail que esté configurado en la computadora. Para esto inicializamos la propiedad action de la siguiente forma: < form action="mailto:pizzasya@htmlya.com" method="post" enctype="text/plain" >. Es decir inicializamos la propiedad action con el texto mailto seguido de dos puntos y la dirección de mail a la que queremos enviar los datos del formulario, recordemos siempre que utilizamos mailto el emisor del mail depende como esté configurado nuestro software de mail en nuestra computadora. Además inicializamos la propiedad enctype con el valor "text/plain" con lo que le indicamos que se trata de un archivo de texto plano. Tengamos en cuenta que no podemos enviar archivos adjuntos.</p>
+
+		       </section>      
+        
+		</div>
+		</main>
+		<footer>
+			<p>PROYECTO. MF0950_2</p>
+			<p>Jon Mikel Alonso Salazar</p>
+			<hr>
+			<hr>
+			<div>
+			<img src="../images/ayto-laredo.jpg" alt="laredo" width="200">
+					<img src="../images/emcan.png" alt="emcan" width="200">
+					<img src="../images/gob-cantabria.png" alt="cantabria" width="200">
+					<img src="../images/jubilar.png" alt="jubilar" width="200">
+					<img src="../images/planjoven.jpg" alt="joven" width="200">
+					<img src="../images/sepe.jpg" alt="sepe" width="200">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>PROYECTO JON</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+	<meta charset="utf-8">
+</head>
+<body>
+	<div>
+		<img alt src="../images/css.png" width="120">
+		<nav>
+		 <ul class="nav">
+	           <li><a href="../index.html" class="boton">INICIO</a></li>
+	           <li><a href="../html/html.html" class="boton1">HTML</a></li>
+	           <li><a href="#" class="boton2">CSS</a></li>
+	     </ul>
+		</nav>
+		<header>
+		
+		</header>
+		<main>	
+		<div id="container">
+			<h1 class="css">¿QUÉ ES CSS?</h1>
+			<section>
+				<p>El CSS (hojas de estilo en cascada) es un lenguaje de marcado que se encarga de la apariencia de las páginas web. Controla los colores, las fuentes y el diseño de los elementos de tu sitio web.</p>
+				<p>El CSS en línea se utiliza para dar estilo a un elemento HTML específico. Para este tipo de estilo CSS, sólo tendrás que añadir el atributo style a cada etiqueta HTML, sin utilizar selectores.</p>
+				<p>El CSS interno o incrustado requiere que añadas la etiqueta style en la sección head de tu documento HTML. Este estilo CSS es un método eficaz para dar estilo a una sola página. Sin embargo, utilizar este estilo para varias páginas requiere mucho tiempo, ya que es necesario poner reglas CSS en cada página de tu sitio web.</p>
+				<p>Con el CSS externo, enlazarás tus páginas web a un archivo .css externo, que puede ser creado con cualquier editor de texto. Este tipo de CSS es un método más eficiente, especialmente para estilizar un sitio web grande. Al editar un archivo .css, puedes cambiar todo tu sitio de una sola vez.</p>
+				<img src="../images/Captura2.PNG">
+				<h2>Pequeñas partes de la página</h2>
+
+<p>
+Para definir estilos en secciones reducidas de una página se puede utilizar el atributo <b>style</b> en la etiqueta sobre la que queremos aplicar estilos. Como valor de ese atributo indicamos en sintaxis CSS las características de estilos. Lo vemos con un ejemplo, pondremos un párrafo en el que determinadas palabras las vamos a visualizar en color verde.
+</p>
+
+<pre class="language-markup"><code>&lt;p&gt;
+Esto es un párrafo en varias palabras &lt;span style=&quot;color:green&quot;&gt;en color verde&lt;/span&gt;. resulta muy fácil.
+&lt;/p&gt;</code></pre>
+
+  <div class="nota">
+	Nota: La etiqueta <code>&lt;span&gt;</code> del HTML quizás no sea tan conocida como otras. Es una etiqueta que, por si sola, no tiene ninguna representación en la página. Es muy habitual usarla justamente para lo que hemos hecho en el anterior ejemplo, separar partes del contenido de texto de una etiqueta, para aplicarle estilos determinados a esa parte de dentro de la etiqueta.
+  </div>
+
+<h2>Estilo definido para una etiqueta</h2>
+
+<p>
+De este modo podemos hacer que toda una etiqueta muestre un estilo determinado. Por ejemplo, podemos definir un párrafo entero en color rojo y otro en color azul. Para ello utilizamos el atributo <b>style</b>, que es admitido por todas las etiquetas del HTML.
+</p>
+  <div class="nota">
+  Nota: Este uso de las CSS podríamos decir que es en realidad el mismo que el anterior. Solo que la etiqueta es de bloque y no una etiqueta inline (en línea) como <code>&lt;span&gt;</code>.
+  </div>
+<pre class="language-markup"><code>&lt;p style=&quot;color:#990000&quot;&gt;
+Esto es un párrafo de color rojo.
+&lt;/p&gt; 
+&lt;p style=&quot;color:#000099&quot;&gt;
+Esto es un párrafo de color azul.
+&lt;/p&gt;</code></pre>	
+
+
+<h2>Estilo definido en una parte de la p&aacute;gina</h2>
+
+<p>
+Con la etiqueta <code>&lt;div&gt;</code> podemos definir secciones de una página y aplicarle estilos con el atributo <b>style</b>, es decir, podemos definir estilos de una vez a todo un bloque de la página.
+</p>
+  
+    <div class="nota">
+ Nota: Para ser rigurosos, este ejemplo sigue siendo el mismo que los dos anteriores, solo que en este caso aplicamos estilos en divisiones que conseguimos con la etiqueta  <code>&lt;div&gt;</code>. El uso de esta etiqueta suele ser justamente ese: englobar partes de un documento HTML para que podamos aplicar estilos a todo el grupo de etiquetas, como el posicionamiento, color, borde, tamaño de letra...
+  </div>
+
+<pre class="language-markup"><code>&lt;div style=&quot;color:#000099; font-weight:bold&quot;&gt;
+&lt;h3&gt;Estas etiquetas van en &lt;i&gt;azul y negrita&lt;/i&gt;&lt;/h3&gt;
+&lt;p&gt;
+Seguimos dentro del DIV, luego permanecen los etilos 
+&lt;/p&gt; 
+&lt;/div&gt;</code></pre>
+
+
+<p>
+Hasta aqu&iacute; hemos visto los usos de las CSS más específicos, que se consiguen usando el atributo style en la etiqueta. Realmente todos los usos anteriores eran el mismo, pero el enfoque era distinto ya que las etiquetas del HTML que hemos usado tienen distintos alcances. Sin embargo, hay otras formas m&aacute;s avanzadas de usar las CSS, que deberías tener en cuenta porque son todavía más versátiles y recomendadas</a>.
+</p>
+  
+<h2>Estilo definido para toda una página</h2>
+
+<p>
+Podemos definir, en la cabecera del documento, estilos para que sean aplicados a toda la página. Es una manera muy cómoda de darle forma al documento y muy potente, ya que estos estilos serán seguidos en toda la página y nos ahorraremos así "ensuciar" las etiquetas HTML colocando el atributo style. 
+  <p>
+  Además, es común que los estilos declarados se quieran aplicar a distintas etiquetas dentro del mismo documento. Gracias a la aplicación de estilos para toda la página, podemos escribir los estilos una vez y usarlos para un número indefinido de etiquetas. Por ejemplo podremos definir el estilo a todos los párrafos una vez y que se aplique igualmente, sea cual sea el número de párrafos del documento. Por último, también tendremos la ventaja que, si más adelante deseamos cambiar los estilos de todas las etiquetas, lo haremos de una sola vez, ya que el estilo fue definido una única vez de manera global.
+</p>
+
+<p>
+Este ejemplo es más complicado, puesto que se utiliza la sintaxis CSS de manera más avanzada. Pero no te preocupes puesto que con los ejemplos irás aprendiendo su uso y más tarde comentaremos la sintaxis en profundidad.
+</p>
+
+<p>
+  En el ejemplo vemos que se utiliza la etiqueta <code>&lt;style&gt;</code> colocada en la cabecera de la página para definir los distintos estilos del documento.
+</p>
+
+<p>
+A grandes rasgos, entre <code>&lt;style&gt;</code> y <code>&lt;/style&gt;</code>, se coloca el nombre de la etiqueta (o selector) para la que queremos definir los estilos y entre llaves <code>-{ }-</code> colocamos en sintaxis CSS las características de estilos.
+</p>
+
+<pre class="language-markup"><code>&lt;html&gt;
+&lt;head&gt;
+ &lt;title&gt;Ejemplo de estilos para toda una p&amp;aacute;gina&lt;/title&gt;
+ &lt;style&gt;
+ h1 { text-decoration: underline; text-align: center }
+ p { font-Family: arial,verdana; color: white; background-color: black }
+ body { color: black; background-color: #cccccc; text-indent: 1cm }
+ &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;P&amp;aacute;gina con estilos&lt;/h1&gt;
+Bienvenidos...
+&lt;p&gt;Siento ser tan hortera, pero esto es un ejemplo sin m&amp;aacute;s importancia&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>
+Como se puede apreciar en el código, hemos definido que la etiqueta <code>&lt;h1&gt;</code> se presentará
+</p>
+
+<ul>
+<li>Subrayado</li>
+<li>Centrada</li>
+</ul>
+
+<p>
+También, por ejemplo, hemos definido que el cuerpo entero de la página (etiqueta <code>&lt;body&gt;</code>) se le apliquen los estilos siguientes:
+</p>
+
+<ul>
+<li>Color del texto negro</li>
+<li>Color del fondo grisaceo</li>
+<li>Margen lateral de 1 centímetro</li>
+</ul>
+
+<p>
+Caber destacar que muchos de los estilos aplicados a la etiqueta <code>&lt;body&gt;</code> son  heredados por el resto de las etiquetas del documento, como el color del texto o su tamaño. Esto es así siempre y cuando no se vuelvan a definir esos estilos en las  etiquetas hijas, en cuyo caso el estilo de la etiqueta más concreta será el que mande. Puede verse este detalle en la etiqueta <code>&lt;p&gt;</code>, que tiene definidos estilos que ya fueron definidos para <code>&lt;body&gt;</code>. Los estilos que se tienen en cuenta son los de la etiqueta <code>&lt;p&gt;</code>, que es más concreta.
+</p>
+
+  
+<h2>Estilo definido para todo un sitio web</h2>
+
+<p>
+Una de las características más potentes del desarrollo con hojas de estilos es la posibilidad de  <b>definir los estilos de todo un sitio web en una única declaración</b>. 
+<p>  
+  Esto se consigue creando un archivo donde tan sólo colocamos las declaraciones de estilos de la página y enlazando todas las páginas del sitio con ese archivo. De este modo, todas las páginas comparten una misma declaración de estilos, reutilizando el código CSS de una manera mucho más potente.
+<p>
+  Este es el modelo más ventajoso de aplicar estilos al documento HTML y por lo tanto el más recomendable. De hecho, cualquier otro modo de definir estilos no es considerado una buena práctica y lo tenemos que evitar siempre que se pueda. 
+<p>
+  Las ventajas de este modelo de definición de estilos son las siguientes:
+  </p>
+  <ul>
+	<li>Se ahorra en líneas de código HTML, ya que no tenemos que escribir el CSS en la propia página (lo que reduce el peso del documento y mejora la velocidad de descarga).
+	  <li>Se mantiene separado correctamente lo que es el contenido (HTML) de la presentación (CSS), que es uno de los objetivos de las hojas de estilo y una de las máximas de todo desarrollador: cada cosa en su sitio.
+	<li>Se evita la molestia de definir una y otra vez los estilos con el HTML y lo que es más importante,  si cambiamos la declaración de estilos, cambiarán automáticamente todas las páginas del sitio web. Esto es una característica muy deseable, porque aumenta considerablemente la facilidad de mantenimiento del sitio web. Si en cualquier momento se desea cambiar el contenido, no tenemos que preocuparnos por los estilos y viceversa, si queremos cambiar el aspecto del sitio web, no necesitamos preocuparnos ni andar editando el contenido.
+  <li>Cuando están en un archivo separado las declaraciones de estilos CSS se cachean por el navegador, de modo que solo se tienen que descargar en la primera página a la que se accede dentro del sitio web. En las siguientes páginas visitadas los estilos ya están descargados en caché, por lo que no se necesitan transferir de nuevo. Esto ahorra transferencia del servidor, ahorra consumo de datos en los clientes y mejora la velocidad de descarga, optimizando la experiencia de uso.
+	
+</ul>
+
+<p>
+Veamos ahora cómo el proceso para incluir estilos con un fichero externo.
+</p>
+
+<h3>
+1- Creamos el fichero con la declaración de estilos
+</h3>
+
+<p>
+Es un fichero de texto normal, que puede tener cualquer extensión, aunque le podemos asignar la extensión .css para aclararnos qué tipo de archivo es. El texto que debemos incluir debe ser escrito exclusivamente en sintaxis CSS, es decir, sería erroneo incluir código HTML en el: etiquetas y demás. Podemos ver un ejemplo a continuación.
+</p>
+
+<pre class="language-css"><code>P  {
+ font-size : 12pt;
+ font-family : arial,helvetica;
+ font-weight : normal;
+}
+
+H1  {
+ font-size : 36pt;
+ font-family : verdana,arial;
+ text-decoration : underline;
+ text-align : center;
+ background-color : Teal;
+}
+
+TD  {
+ font-size : 10pt;
+ font-family : verdana,arial;
+ text-align : center;
+ background-color : 666666;
+}
+
+BODY  {
+ background-color : #006600;
+ font-family : arial;
+ color : White;
+}</code></pre>
+
+<h3>2- Enlazamos la página web con la hoja de estilos</h3>
+
+<p>
+Para ello, vamos a colocar la etiqueta <code>&lt;link&gt;</code> con los atributos siguientes: 
+</p>
+
+<ul>
+<li><b>rel="STYLESHEET"</b> indicando que el enlace es con una hoja de estilos</li>
+<li><b>type="text/css"</b> porque ela archivo es de texto, en sintaxis CSS (Actualizado: este atributo ya no es necesario desde HTML5)</li>
+<li><b>href="estilos.css"</b> indica el nombre del fichero fuente de los estilos</li>         
+</ul>
+
+<p>
+Veamos una p&aacute;gina web entera que enlaza con la declaración de estilos anterior:
+</p>
+
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+ &lt;link rel=&quot;STYLESHEET&quot; href=&quot;estilos.css&quot;&gt;
+ &lt;title&gt;P&amp;aacute;gina que lee estilos&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;P&amp;aacute;gina que lee estilos&lt;/h1&gt;
+Esta p&amp;aacute;gina tiene en la cabecera la etiqueta necesaria para enlazar con la hoja de estilos. Es muy f&amp;aacute;cil.
+&lt;br&gt;
+&lt;br&gt;
+&lt;table width=&quot;300&quot; cellspacing=&quot;2&quot; cellpadding=&quot;2&quot; border=&quot;0&quot;&gt;
+&lt;tr&gt;
+    &lt;td&gt;Esto est&amp;aacute; dentro de un TD, luego tiene estilo propio, declarado en el fichero externo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;La segunda fila del TD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h2>Reglas de importancia en los estilos</h2>
+
+<p>
+Los estilos se heredan de una etiqueta a otra, como se indic&oacute; anteriormente. Por ejemplo, si tenemos declarado en el <code>&lt;BODY&gt;</code> unos estilos, en muchos casos, estas declaraciones tambi&eacute;n afectatar&aacute;n a etiquetas que est&eacute;n dentro de esta etiqueta, o lo que es lo mismo, dentro de todo el cuerpo. 
+</p>
+
+	  <div class="nota">
+		La propagación o herencia de estilos desde padres a hijos no ocurre siempre. Depende del estilo en particular. Por ejemplo, el color del texto sí que se propaga, pero no ocurre con el borde del elemento. Es decir, si tenemos un borde definido en el BODY no provocaría que todos los párrafos que hay dentro del documento tengan también un borde.
+	  </div>
+<p>
+En muchas ocasiones m&aacute;s de una declaraci&oacute;n de estilos afecta a la misma porci&oacute;n de la p&aacute;gina. Siempre se tiene en cuenta la declaraci&oacute;n m&aacute;s particular. Pero las declaraciones de estilos se pueden realizar de m&uacute;ltiples modos y con varias etiquetas, tambi&eacute;n entre estos modos hay una jerarqu&iacute;a de importancia para resolver conflictos entre varias declaracionesde estilos distintas para una misma porci&oacute;n de p&aacute;gina. Se puede ver a continuaci&oacute;n esta jerarqu&iacute;a, primero ponemos las formas de declaraci&oacute;n m&aacute;s generales, y por tanto menos respetadas en caso de conflicto:
+</p>
+
+<ul>
+<li>Declaraci&oacute;n de estilos con fichero externo. (Para todo un sitio web)</li>
+<li>Declaraci&oacute;n de estilos para toda la p&aacute;gina. (Con la etiqueta <code>&lt;STYLE&gt;</code> en la cabecera de la p&aacute;gina)</li>
+<li>Definidos en una etiqueta en concreto. (Utilizando el atributo style en la etiqueta en cuesti&oacute;n)</li>
+</ul>
+<h2>Sintaxis CSS</h2>
+<p>
+Veamos entonces estas reglas básicas sobre la sintaxis CSS, mediante un código de ejemplo que analizaremos con detalle:
+</p>
+
+<pre><code class="language-css">h1 {
+    font-size: 1.5rem;
+}
+</code></pre>
+
+<p>Para definir el estilo de una etiqueta se escribe la etiqueta seguida de la lista de atributos encerrados entre llaves. 
+</p>
+En el ejemplo anterior de código podemos fijarnos en las siguientes partes:</p>
+<ul>
+  <li><b>"h1" es el selector</b>. Es un selector de etiqueta, que se refiere a todo los elementos o etiquetas <code>&lt;h1&gt;</code> que se encuentren en el documento HTML. Como veremos a lo largo del manual, existen muchos tipos de selectores.</li>
+  <li><b>"font-size" es el atributo CSS</b>. Este atributo se refiere al tamaño de la fuente o letra. Existen decenas de atributos para las más variadas necesidades de diseño. Iremos aprendiéndolos más adelante.</li>
+  <li><b>"1.5rem" es el valor</b> que estamos asignando, en este caso al atributo &quot;font-size&quot; sobre todas las etiquetas H1 del documento HTML. El dato &quot;1.5&quot; podríamos decir que es el valor en sí, mientras que &quot;rem&quot; es la unidad CSS que estamos utilizando. Existen diveras unidades y las podemos clasificar por tipos. En este artículo comenzaremos a estudiarlas con más detalle.</li>
+</ul>
+
+<h3>Definición de un estilo mediante diversos atributos</h3>
+
+<p>Para definir un estilo se utilizan atributos como font-size, text-decoration... seguidos de dos puntos y el valor que le deseemos asignar. Podemos definir un estilo a base de definir muchos atributos separados por punto y coma. Por ejemplo:
+</p>
+  <pre><code class="language-css">p {
+    font-size: 10pt; 
+    text-decoration: underline; 
+    color: black;
+}
+</code></pre>
+
+<div class="nota"> El &uacute;ltimo punto y coma de la lista de atributos es opcional. En el ejemplo anterior, color: black; podría haberse escrito sin el punto y coma ";". Sin embargo, lo normal es colocarlo, por si más adelante queremos escribir más atributos, no tener que editar la línea anterior.
+  </div>
+
+<h2>Unidades CSS</h2>
+
+<p>Los valores que se pueden asignar a los atributos de estilo se pueden ver en una tabla en el siguiente cap&iacute;tulo. Muchos estos valores son unidades de medida (<b>Unidades CSS</b>), por ejemplo, el valor del tama&ntilde;o de un margen o el tama&ntilde;o de la fuente. 
+<p>  
+  Las unidades de medida CSS se pueden clasificar en dos grupos, las relativas y las absolutas. Más la posibilidad de expresar valores en porcentaje.
+</ul>
+
+<h3>Unidades Relativas</h3>
+  <p>
+	Se llaman así porque son unidades relativas al medio o soporte sobre el que se está viendo la página web, que dependiendo de cada usuario puede ser distinto, puesto que existen muchos dispositivos que pueden acceder a la web, como ordenadores o teléfonos móviles.
+</p>
+<p>	
+	En principio las unidades relativas son más aconsejables, porque se ajustarán mejor al medio con el que el usuario está accediendo a nuestra web. Son las siguientes:
+</p>
+<p>
+</p>
+
+
+<h3>Unidades Absolutas</h3> 
+  
+  <p>Las unidades absolutas son medidas fijas, que deberían verse igual en todos los dispositivos. Como los centímetros, que son una convención de medida internacional. 
+	</p>
+<p>
+	Pese a que en principio pueden parece más útiles, puesto que se verían en todos los sistemas igual, tienen el problema de adaptarse menos a las distintas particularidades de los dispositivos que pueden acceder a una web y restan accesibilidad a nuestro web. Puede que en tu ordenador 1 centímetro sea una medida razonable, pero en un móvil puede ser un espacio exageradamente grande, puesto que la pantalla es mucho menor.
+  </p>
+<p>
+  Se aconseja utilizar, por tanto, medidas relativas. Por adaptabilidad al medio donde se va a mostrar la página web, pero también por accesibilidad, de modo que las personas que necesiten ver los textos en unos tamaños adecuados para ellos, puedan hacerlo.
+</p>
+
+<p>
+</p>
+
+<p>
+<h3>Unidades CSS basadas en porcentaje</h3> 
+  
+
+<p>El porcentaje se utiliza para definir una unidad en función de la que esté definida en un momento dado. Imaginemos que estamos trabajando en 12pt y definimos una unidad como 150%. Esto sería igual al 150% de los 12pt actuales, que equivale a 18pt.
+
+</p>
+<p>
+También se usa el porcentaje para indicar tamaños en relación al tamaño completo. Por ejemplo, una columna de la página que ocupe el 40% del espacio disponible en el elemento donde se encuentra.
+  </p>
+<div class="nota">
+  Como puedes entender, en realidad las unidades basadas en porcentaje son también unidades relativas
+  </div>
+<p>
+</p>
+
+  <h2>Otros valores de atributos de estilo</h2>
+  <p>
+	No todos los atributos de estilos CSS tienen valores expresados en unidades. Hay atributos como por ejempo el alineamiento de un texto que tienen un conjunto de valores posibles, como por ejemplo "center", "left" o "right", entre otros.
+  </p>
+<p>
+  Cuando tenemos un atributo CSS que acepta un conjunto de valores, no nos queda otra que aprendernos qué valores posibles puede tener. Aunque en verdad, no se trata de memorizar nada, sino que a medida que vayamos adquiriendo experiencia estos valores posibles los iremos aprendiendo y memorizando de manera natural. Además, siempre existen las referencias de CSS, que nos permiten consultar de manera rápida qué valores podemos aplicar a cada atributo.
+  </p>
+  <h3>Valores de colores en CSS</h3>
+<p>  Un ejemplo de valores de CSS que no se indican con las unidades tradicionales son los colores.
+  </p>
+<p>
+  
+Los colores se expresan con valores RGB, igual que los que conocemos para los <a href=http://www.desarrolloweb.com/articulos/colores-html.html>colores HTML</a>. Con la salvedad que un color se puede especificar también con tres números hexadecimales, en lugar de 6, como era obligatorio en HTML. 
+  </p>
+<p>
+  Por ejemplo #fff equivaldría a #ffffff, o #123 sería #112233.
+  </p>
+  
+  <pre><code class="language-css">a {
+    color: #39c;
+}
+</code></pre>
+<p>Habría sido equivalente a escribir:</p>
+<pre><code class="language-css">a {
+    color: #3399cc;
+}
+</code></pre>
+
+<p>
+  
+  Además, los colores se pueden especificar también en valores RGB decimales, con la notación rgb(r,g,b), siendo los valores de r, g, b números entre 0 y 255, por ejemplo rgb(100,0,255). 
+  
+  </p>
+<pre><code class="language-css">body {
+    background-color: rgb(220, 220, 240);
+}
+</code></pre>
+
+  
+  <p>Otra notación posible es rgb(r%,g%,b%), siendo cada uno de los r%,g%, b% un valor entre 0 y 100, por ejemplo rgb(100%,50%,0%), que sería todo de rojo, la mitad de verde y cero de azul.
+  Además, más recientemente se pueden escribir <a href="https://desarrolloweb.com/articulos/colores-rgba-css-3.html">colores con canal Alpha</a>, es decir, indicando el grado de transparencia que podría tener un color.
+  </p>
+  
+  <h3>Valores de URL</h3>
+  <p>
+  Otro tipo de valores que se pueden utilizar en las hojas de estilo en cascada son las URL, que sirven para especificar rutas hacia elementos como imágenes a colocar en fondos de elementos. 
+	</p>
+<p>Las URL en CSS se especifican con la notación <code>url(valor)</code>, siendo &quot;valor&quot; la URL a la que queremos dirigirnos. La URL se puede indicar de manera absoluta o relativa.</p>
+<p>Si la URL es absoluta no hay duda de la interpretación, ya que se indicará la URL completa. Ahora bien, si se trata de una URL relativa puede tener distintas consideraciones de interpretación por parte del navegador.</p>
+<ul>
+<li>Si el valor de url() está escrito en un archivo .css externo, entonces la url relativa se interpreta desde el documento CSS donde estamos.</li>
+<li>Si el valor de url() está escrito en un documento HTML, entonces se interpreta desde el archivo .html donde estamos.</li>
+</ul>
+
+<p>
+  Además, una URL se puede indicar con comillas dobles, simples o sin comillas. Por ejemplo: 
+</p>
+<pre><code class="language-css">body {
+    font-size: 1rem; 
+    background-image: url(http://www.desarrolloweb.com/images/mi_imagen.gif);
+}
+</code></pre>
+
+<p>
+  También lo podemos indicar con comillas dobles. Además en este segundo ejemplo estamos usando una ruta relativa para la URL:
+  </p>
+<pre><code class="language-css">article {
+    color: #fff;
+    background-image: url(&quot;../images/otraimagen.jpg&quot;);
+}
+</code></pre>
+  <h2>Conclusión</h2>
+<p>
+Hasta aqu&iacute;, he explicado mucha información general con respecto a la sintaxis CSS y las unidades de medida CSS disponibles.
+
+				
+
+			</section>
+		</div>
+		</main>
+		<footer>
+			<p>PROYECTO. MF0950_2</p>
+			<p>Jon Mikel Alonso Salazar</p>
+			<hr>
+			<hr>
+			<div>
+			<img src="../images/ayto-laredo.jpg" alt="laredo" width="200">
+					<img src="../images/emcan.png" alt="emcan" width="200">
+					<img src="../images/gob-cantabria.png" alt="cantabria" width="200">
+					<img src="../images/jubilar.png" alt="jubilar" width="200">
+					<img src="../images/planjoven.jpg" alt="joven" width="200">
+					<img src="../images/sepe.jpg" alt="sepe" width="200">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
