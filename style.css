@@ -1,0 +1,103 @@
+        body{
+			font-family: coda;
+			font-size: 20px;
+			background-image: url(images/fondo1.jpg);
+	    	background-repeat: no-repeat;
+	    	background-size: cover;
+	    	background-attachment: fixed;
+		}
+		h1{
+			font-size: 50px;
+			color: gray;
+			font-family: coda;
+			padding: 60px;
+		}
+		h1.html{
+			color: orange;
+
+		}
+		h1.css{
+			color: blue;
+		}
+		h2{
+			padding: 100px;
+			text-decoration: underline;
+			font-family: coda;
+		}
+		p{
+			padding: 10px;
+			text-align: center;
+			font-family: coda;
+		}
+		div{
+			width: 85%;
+			margin: auto;
+			padding: 40px;
+
+		}
+		footer{
+			text-align: center;
+			padding: 250px;
+		}
+		#container{
+			width: 60%;
+			margin: auto;
+			border: 1px solid white;
+			padding: 80px;
+			background-color: #F8F8F8;
+			text-align: center;
+		}
+		.alonso{
+			text-align: center;
+		}
+        ul.nav{
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			padding: 0.5rem;
+			margin-top: 0;
+        }
+        ul.nav li{
+		display: flex;
+		font-family: coda;
+		font-size: larger;
+		padding: 1rem;
+        }
+        ul.nav li a{
+		color: #FFFFFF;
+		font-variant: small-caps;
+		text-decoration: none;
+        }
+		a.boton:link, a.boton:visited{
+			background-color: #DADADA;
+			color: #000000;
+			padding: 10px;
+			text-decoration: none;
+		}
+		a.boton:hover {
+			background-color: #F8F8F8;
+		}
+		a.boton1:link, a.boton1:visited{
+			background-color: #DADADA;
+			color: #000000;
+			padding: 10px;
+			text-decoration: none;
+		}
+		a.boton1:hover {
+			background-color: orange;
+		}
+		a.boton2:link, a.boton2:visited{
+			background-color: #DADADA;
+			color: #000000;
+			padding: 10px;
+			text-decoration: none;
+		}
+		a.boton2:hover {
+			background-color: blue;
+		}
+		.language-markup {
+		    text-align: center;
+			text-decoration: none;
+			font-size:small;
+
+        }
